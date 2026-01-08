@@ -1,0 +1,8 @@
+- name: Calling Variables from file
+  hosts: localhost
+  vars_files:
+  - vars.yaml
+  tasks:
+    - name: variables from the file
+      ansible.builtin.debug:
+        msg: "Watched {{movie}}, lead actor is {{hero}}, my rating {{rating}} "
