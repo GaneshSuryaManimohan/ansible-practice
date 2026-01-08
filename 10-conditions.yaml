@@ -1,0 +1,9 @@
+- name: conditons
+  hosts: local
+  tasks:
+    - name: check user exists or not
+      ansible.builtin.command: id expense
+
+    - name: other task
+      ansible.builtin.debug:
+        msg: "second task"
