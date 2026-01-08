@@ -1,5 +1,5 @@
 - name: Variables from inventory
-  hosts: localhost
+  hosts: local
   tasks:
     - name: calling variables from inventory file
       vars:
