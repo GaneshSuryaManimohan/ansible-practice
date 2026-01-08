@@ -1,10 +1,17 @@
 - name: Variables
   hosts: localhost
-  vars:
+  vars: #variable declaration
     firstname: "Ganesh"
     middlename: "Surya Manimohan"
     lastname: "Thuttagunta"
   tasks:
-    - name: print name
+    - name: Task level variable
+      vars: #declaration of task level variable
+        firstname: "Surya"
       ansible.builtin.debug:
         msg: "Hi, my firstname is {{firstname}}, middlename is {{middlename}} and lastname is {{lastname}}"
+
+    - name: inheritence #takes variable value from the Play
+      ansible.builtin.debug:
+        msg: "Hi, my firstname is {{firstname}}, middlename is {{middlename}} and lastname is {{lastname}}"
+    
