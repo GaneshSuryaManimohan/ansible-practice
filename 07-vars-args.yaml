@@ -1,0 +1,10 @@
+- name: variables from arguments
+  hosts: local
+  tasks:
+    - name: calling variables from args
+      ansible.builtin.debug:
+        msg: "Hi {{name}}, {{wishes}}"
+
+# here, the variables name and wishes are not declared anywhere but we can pass them as arguments while running the playbook
+
+# 
