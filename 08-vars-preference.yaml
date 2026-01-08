@@ -1,0 +1,16 @@
+- name: variable preferences
+  hosts: local
+  vars:
+    - WISH: "goodluck from play level variables"
+  vars_files:
+  - vars.yaml
+  vars_prompt:
+  - name: WISH
+    prompt: "please enter your wishes"
+    private: false
+  tasks:
+    - name: 
+      vars:
+        WISH: "goodluck from task level variable"
+      ansible.builtin.debug:
+        msg: "Hello, {{WISH}}"
