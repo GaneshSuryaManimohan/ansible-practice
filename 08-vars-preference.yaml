@@ -10,7 +10,11 @@
     private: false
   tasks:
     - name: 
-      vars:
-        WISH: "goodluck from task level variable"
+      # vars:
+      #   WISH: "goodluck from task level variable"
       ansible.builtin.debug:
         msg: "Hello, {{WISH}}"
+
+# 1st preference from args == command line variables
+# 2nd TASK Level variables
+# 3rd 
