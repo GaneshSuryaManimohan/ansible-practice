@@ -9,9 +9,11 @@
     - name: display user info
       ansible.builtin.debug:
         msg: "user info is {{USER}}"
-    # - name: create user if not exists
-    #   ansible.builtin.command: useradd expense
+
+    - name: create user if not exists
+      ansible.builtin.command: useradd expense
+      when: USER.rc != 0
 
     - name: other task
       ansible.builtin.debug:
-        msg: "second task"
+        msg: "someother task"
