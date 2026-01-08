@@ -5,6 +5,10 @@
       ansible.builtin.debug:
         msg: "Hi {{PERSON}}, {{WISHES}}"
 
-# here, the variables name and wishes are not declared anywhere but we can pass them as arguments while running the playbook
+# here, the variables name and wishes are not declared anywhere but we can pass them as arguments while running the playbook as below:
 
-# 
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 07-vars-args.yaml -e "PERSON=surya WISHES=goodluck!"
+
+# OR
+
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 07-vars-args.yaml -e PERSON=surya -e WISHES=goodluck!
