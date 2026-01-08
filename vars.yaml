@@ -1,4 +1,3 @@
-vars: #variable declaration
-    movie: "Bahubali"
-    hero: "Prabhas"
-    rating: "4/5"
+movie: "Bahubali"
+hero: "Prabhas"
+rating: "4/5"
