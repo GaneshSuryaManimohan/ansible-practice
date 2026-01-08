@@ -1,0 +1,10 @@
+- name: Variables from inventory
+  hosts: localhost
+  tasks:
+    - name: calling variables from inventory file
+      vars:
+        mode: "Online"
+      ansible.builtin.debug:
+        msg: "Hi, welcome to {{course}}, duration is {{hours}}, trainer is {{name}}, mode of teaching {{mode}}"
+
+# here the variables course, hours, & name are defined in inventory file, on mode is defined in the task.
