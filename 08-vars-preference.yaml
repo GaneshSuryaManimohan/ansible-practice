@@ -4,13 +4,13 @@
     - WISH: "goodluck from play level variables"
   vars_files:
   - vars.yaml
-  vars_prompt:
-  - name: WISH
-    prompt: "please enter your wishes"
-    private: false
+  # vars_prompt:
+  # - name: WISH
+  #   prompt: "please enter your wishes"
+  #   private: false
   tasks:
     - name: 
-      # vars:
+    # vars:
       #   WISH: "goodluck from task level variable"
       ansible.builtin.debug:
         msg: "Hello, {{WISH}}"
@@ -18,4 +18,4 @@
 # 1st preference from args == command line variables
 # 2nd TASK Level variables
 # 3rd variable file
-# 4th 
+# 4th from prompt
