@@ -1,0 +1,10 @@
+- name: Variables
+  hosts: localhost
+  vars:
+    firstname: "Ganesh"
+    middlename: "Surya Manimohan"
+    lastname: "Thuttagunta"
+  tasks:
+    - name: print name
+      ansible.builtin.debug:
+        msg: "Hi, my firstname is {{firstname}}, middlename is {{middlename}} and lastname is {{lastname}}"
