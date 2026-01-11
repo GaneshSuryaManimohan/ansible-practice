@@ -1,0 +1,24 @@
+- name: different type of filters
+  hosts: local
+  tasks:
+    - name: display default value
+      ansible.builtin.debug:
+        msg: "Hello {{course | default('Aws+DevOps')}}" #here course is not defined but we provided a filter where it will take default value as 'AWS+DevOps'
+
+- name: upper case
+  hosts: local
+  vars:
+    greeting: "hi good morning!"
+  tasks:
+    - name: convert to upper
+      ansible.builtin.debug:
+        msg: "{{greeting | upper}}"
+
+- name: lower case
+  hosts: local
+  vars:
+    message: "HI THIS IS AWS with DevOps"
+  tasks:
+    - name: convert to lower
+      ansible.builtin.debug:
+        msg: "{{message | lower }}"
