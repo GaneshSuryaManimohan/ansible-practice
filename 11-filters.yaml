@@ -49,9 +49,9 @@
       trainer: "Siva"
       duration: "120hrs"
   tasks:
-    - name: befor converting
+    - name: before converting
       ansible.builtin.debug:
-        msg: "{{details}}"
+        msg: "before convering:: {{details}}"
     - name: after converting
       ansible.builtin.debug:
-        msg: "{{ details | dict2items }}"
+        msg: "after converting:: {{ details | dict2items }}"
