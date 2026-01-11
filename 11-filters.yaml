@@ -22,3 +22,21 @@
     - name: convert to lower
       ansible.builtin.debug:
         msg: "{{message | lower }}"
+
+- name: remove duplicates
+  hosts: local
+  vars:
+    numbers: [1,1,3,4,5,36,7,8,95,5,5,7,7,8,9,10]
+  tasks:
+    - name: duplicates removed
+      ansible.builtin.debug:
+        msg: "{{ numbers | unique }}"
+
+- name: min and max
+  hosts: local
+  vars:
+    age: [13,24,8,65,45]
+  tasks:
+    name: min and max age
+    ansible.builtin.debug:
+      msg: "min age is {{age | min}}, max age is {{ age | max}}"
