@@ -1,0 +1,12 @@
+- name: install packages through loops
+  hosts: local
+  become: true
+  tasks:
+    - name: install packages
+      ansible.builtin.dnf:
+        name: "{{item}}"
+        state: latest
+      loop:
+        - postfix
+        - fail2ban
+        - nginx
