@@ -10,4 +10,4 @@
         - { name: 'postfix' , state: 'absent' }
         - { name: 'fail2ban' , state: 'absent'}
         - { name: 'nginx' , state: 'absent' }
-        - { name: 'nodejs' , state: 'present'}
+        - { name: 'nodejs' , state: 'latest'}
